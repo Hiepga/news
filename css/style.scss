@@ -1,0 +1,144 @@
+@import "main.scss";
+$background_headertop		: #e8280b;
+$img_logo   				: url(../images/logo.svg);
+
+$color_text-hover 			: #ff0202;
+$color_text       			: #181818;
+$color_text-header       	: #fff;
+$color_text-header-hover    : black;
+$color_text-menu			: #181818;
+$color_text-menu-hover		: #e8280b;
+$color_text-footer			: #b0b1b4;
+$color_text-time  			: #b7b7b7;
+
+$font_size-header			: 14px;
+$font_size-menu				: 16px;
+
+
+@mixin text ($color, $size, $decoration, $align, $transform, $weight) {
+	color: $color;
+	font-size: $size;
+	text-decoration: $decoration;
+	text-align: $align;
+	text-transform: $transform;
+	font-weight: $weight;
+}
+
+
+//--------------- HEADER ------------
+#header{
+	.header_top{
+		background: $background_headertop;
+		padding: 20px 0px;
+		.logo{
+			float: left;
+			a{
+				background: $img_logo no-repeat center top;
+				width: 235px;
+				height: 45px;
+				display: block;
+			}
+		}
+		.header_login{
+			float: right;
+			margin-right: 20px;
+			li{
+				float: left;
+				margin-left: 10px;
+				a{
+					padding: 15px 25px;
+					display: block;
+					color: $color_text-header;
+					font-size: $font_size-header;
+					&:hover, &.active{
+						background-color: #fff;	
+						color: $color_text-header-hover;
+						border-radius: 5px;
+					}
+				}
+			}
+		}
+	}
+	.header_bottom{
+		border-bottom: 1px solid #eaeaea;
+		padding: 5px 0px;
+		.header_menu{
+			float: left;
+			ul{
+				li{
+					float: left;
+					a{
+						height: 100%;
+						display: block;
+						padding: 25px 20px;
+						@include text($color_text-menu, $font_size-menu, none, center, uppercase, none);
+						&:hover{
+							color: $color_text-menu-hover;
+						}
+					}
+				}
+			}
+		}
+		.header_search{
+			float: right;
+			border: 1px solid #cecece;
+			border-radius: 4px;
+			padding: 0px 10px;
+			margin: 10px 20px 0px 0px;
+			.text_search{
+				border: none;
+				padding: 14px 5px;
+				float: left;
+			}
+			.btn_search{
+				border: none;
+				position: relative;
+				float: left;
+				cursor: pointer;
+				font-family: "FontAwesome";
+				height: 42px;
+				width: 48px;
+				font-size: 18px;
+				font-weight: normal;
+				background: transparent;
+			}
+		}
+	}
+}
+
+//--------------- MAIN ------------
+#main{
+	.main_top{
+		padding: 40px 0px 0px 0px;
+		.main_top-left{
+			width: 72%;
+			float: left;
+			.news_hot{
+				overflow: hidden;
+				.content_left{
+					float: left;
+					width: 60%;
+					.hot_item{
+						
+					}
+				}
+				.content_right{
+					float: right;
+					width: 36%;
+				}
+			}
+			.news_highlights{}
+			.news_picks{}
+			.news_popular{}
+		}
+		.main_top-right{
+			width: 25%;
+			float: right;
+			border: 1px solid #DCDCDC;
+			.news_recent{}
+		}
+	}
+}
+
+//--------------- FOOTER ------------
+#footer{}

@@ -1,0 +1,64 @@
+@import "reset.css";
+@import "font-awesome.min.css";
+
+
+$color_title-news 			: #181818;
+
+@mixin text ($color, $size, $decoration, $align, $transform, $weight) {
+	color: $color;
+	font-size: $size;
+	text-decoration: $decoration;
+	text-align: $align;
+	text-transform: $transform;
+	font-weight: $weight;
+}
+
+// ------- BLOCK COMMON -------
+.wrapper{
+	font-family: tahoma;
+	.container{
+		width: 85%;
+		height: auto;
+		margin: 0px auto;
+		overflow: hidden;
+	}
+}
+
+
+// --------- VERTICAL NEWS ---------
+
+.vertical_item{
+	padding: 20px 0px;
+	.images_news{
+		a{
+			img{
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+	.category_news{
+		a{
+
+		}
+	}
+
+	.title_news{
+		a{
+			@include text($color_title-news, 18px, none, center, uppercase, normal);
+			line-height: 27px;
+		}
+	}
+
+	.content_news{
+
+	}
+
+	.post_news{
+		.author_news{
+			a{
+
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+@import url(reset.css);
+.wrapper {
+  font-family: tahoma;
+}
+
+.wrapper .container {
+  width: 85%;
+  height: auto;
+  margin: 0px auto;
+  overflow: hidden;
+}
