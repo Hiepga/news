@@ -1,8 +1,28 @@
 @import "reset.css";
 @import "font-awesome.min.css";
 
+@font-face {
+    font-family: "Roboto_Bold";
+    src: url('../fonts/Roboto-Bold.ttf');
+}
 
-$color_title-news 			: #181818;
+@font-face {
+    font-family: "Roboto_Regular";
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+
+
+$color_text-header       	: #fff;
+$color_text-header-hover    : black;
+$color_text-menu-hover		: #e8280b;
+$color_text-footer			: #b0b1b4;
+$color_text-time  			: #b7b7b7;
+
+
+$color_text       			: #181818;
+$color_text-hover 			: #ff0202;
+
 
 @mixin text ($color, $size, $decoration, $align, $transform, $weight) {
 	color: $color;
@@ -26,7 +46,6 @@ $color_title-news 			: #181818;
 
 
 // --------- VERTICAL NEWS ---------
-
 .vertical_item{
 	padding: 20px 0px;
 	.images_news{
@@ -34,30 +53,159 @@ $color_title-news 			: #181818;
 			img{
 				height: auto;
 				max-width: 100%;
+				-webkit-transition: all 0.3s;
+						-moz-transition: all 0.3s;
+							transition: all 0.3s;
+			}
+			&:hover{
+				img{
+					-webkit-transform: scale(0.95);
+  						-moz-transform: scale(0.95);
+  							transform: scale(0.95);
+				}
 			}
 		}
 	}
 	.category_news{
 		a{
-
+		    display: inline-block;
+		    font-size: 10px;
+		    color: #a1a1a1;
+		    font-weight: 700;
+		    text-transform: uppercase;
+		    line-height: 21px;
 		}
 	}
 
 	.title_news{
 		a{
-			@include text($color_title-news, 18px, none, center, uppercase, normal);
+			@include text($color_text, 16px, none, center, uppercase, normal);
 			line-height: 27px;
+			font-family: Roboto_Bold;
+			&:hover{
+				color: $color_text-hover ;
+			}
 		}
 	}
 
 	.content_news{
-
+		font-family: Roboto_Regular;
 	}
 
 	.post_news{
 		.author_news{
+			@include text($color_text, 12px, none, left, uppercase, normal);
+			display: block;
+			padding: 5px 0 0 0;
 			a{
+				color: $color_text-hover;
+				display: inline-block;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
 
+// --------- HORIZORTAL NEWS ----------
+.horizontal_item{
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0px 20px 0px;
+	border-bottom: 1px solid #eaeaea;
+	.horizontal_left{
+		float: left;
+		width: 24%;
+		.images_news{
+			a{
+				img{
+					height: auto;
+					max-width: 100%;
+					-webkit-transition: all 0.3s;
+						-moz-transition: all 0.3s;
+							transition: all 0.3s;
+				}
+				&:hover{
+					img{
+	  					-webkit-transform: scale(1.1);
+	  						-moz-transform: scale(1.1);
+	  								transform: scale(1.1);
+					}
+				}
+			}
+		}
+	}
+	.horizontal_right{
+		float: left;
+		width: 72%;
+		margin-left: 2%;
+		.category_news{
+			a{
+			    display: inline-block;
+			    font-size: 10px;
+			    color: #a1a1a1;
+			    font-weight: 700;
+			    text-transform: uppercase;
+			    line-height: 21px;
+			    @include text(#a1a1a1, 10px, none, left, uppercase, normal);
+			}
+		}
+
+		.title_news{
+			a{
+				@include text($color_text, 18px, none, center, uppercase, normal);
+				line-height: 27px;
+				font-family: Roboto_Bold;
+				&:hover{
+					color: $color_text-hover ;
+				}
+			}
+		}
+
+		.content_news{
+			font-family: Roboto_Regular;
+			@include text($color_text, 18px, none, left, none, normal);
+			line-height: 27px;
+		}
+
+		.post_news{
+			.author_news{
+				@include text($color_text, 12px, none, left, uppercase, normal);
+				display: block;
+				padding: 5px 0 0 0;
+				line-height: 24px;
+				a{
+					color: $color_text-hover;
+					display: inline-block;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// ----------  BLOCK NEWS  -----------
+.block_news{
+	border-top: 3px solid #EBEBEB; 
+	overflow: hidden;
+	.title_block-news{
+		padding: 10px 0 0 0;
+		h3{
+			@include text($color_text, 24px, none, left, none, 300);
+			line-height: 40px;
+		}
+	}
+	.content_block-news{
+		li{
+			float: left;
+			width: 48%;
+			margin-right: 4%;
+			&:nth-child(2n){
+				margin-right: 0%;
 			}
 		}
 	}
