@@ -11,8 +11,6 @@
     src: url('../fonts/Roboto-Regular.ttf');
 }
 
-
-
 $color_text-header       	: #fff;
 $color_text-header-hover    : black;
 $color_text-menu-hover		: #e8280b;
@@ -23,6 +21,8 @@ $color_text-time  			: #b7b7b7;
 $color_text       			: #181818;
 $color_text-hover 			: #ff0202;
 
+$color_border   			: #eaeaea;
+
 
 @mixin text ($color, $size, $decoration, $align, $transform, $weight) {
 	color: $color;
@@ -32,6 +32,8 @@ $color_text-hover 			: #ff0202;
 	text-transform: $transform;
 	font-weight: $weight;
 }
+
+a{display: block;}
 
 // ------- BLOCK COMMON -------
 .wrapper{
@@ -50,6 +52,8 @@ $color_text-hover 			: #ff0202;
 	padding: 20px 0px;
 	.images_news{
 		a{
+			border: 1px solid $color_border;
+			overflow: hidden;
 			img{
 				height: auto;
 				max-width: 100%;
@@ -59,27 +63,30 @@ $color_text-hover 			: #ff0202;
 			}
 			&:hover{
 				img{
-					-webkit-transform: scale(0.95);
-  						-moz-transform: scale(0.95);
-  							transform: scale(0.95);
+					-webkit-transform: scale(1.1);
+  						-moz-transform: scale(1.1);
+  							transform: scale(1.1);
 				}
 			}
 		}
 	}
+
+	.time_news{
+		@include text($color_text-time, 14px, none, left, uppercase, none);
+		padding: 5px 0px;
+	}
+
 	.category_news{
 		a{
 		    display: inline-block;
-		    font-size: 10px;
-		    color: #a1a1a1;
-		    font-weight: 700;
-		    text-transform: uppercase;
 		    line-height: 21px;
+		    @include text(#a1a1a1, 10px, none, left, uppercase, 700);
 		}
 	}
 
 	.title_news{
 		a{
-			@include text($color_text, 16px, none, center, uppercase, normal);
+			@include text($color_text, 16px, none, left, uppercase, normal);
 			line-height: 27px;
 			font-family: Roboto_Bold;
 			&:hover{
@@ -113,12 +120,14 @@ $color_text-hover 			: #ff0202;
 	width: 100%;
 	overflow: hidden;
 	padding: 20px 0px 20px 0px;
-	border-bottom: 1px solid #eaeaea;
+	border-bottom: 1px solid $color_border;
 	.horizontal_left{
 		float: left;
 		width: 24%;
 		.images_news{
 			a{
+				border: 1px solid $color_border;
+				overflow: hidden;
 				img{
 					height: auto;
 					max-width: 100%;
@@ -154,7 +163,7 @@ $color_text-hover 			: #ff0202;
 
 		.title_news{
 			a{
-				@include text($color_text, 18px, none, center, uppercase, normal);
+				@include text($color_text, 18px, none, left, uppercase, normal);
 				line-height: 27px;
 				font-family: Roboto_Bold;
 				&:hover{
@@ -188,6 +197,25 @@ $color_text-hover 			: #ff0202;
 }
 
 
+// -----------  NEWS NORMAL  ---------
+.news_normal{
+	overflow: hidden;
+	padding: 10px 0px;
+	border-top: 1px solid $color_border;
+	.time_news-normal{
+		@include text($color_text-time, 14px, none, left, uppercase, none);
+		padding: 5px 0px;
+	}
+	.title_news-normal{
+		@include text($color_text, 16px, none, left, none, normal);
+		line-height: 27px;
+		font-family: Roboto_Regular;
+		&:hover{
+			color: $color_text-hover ;
+		}
+	}
+}
+
 // ----------  BLOCK NEWS  -----------
 .block_news{
 	border-top: 3px solid #EBEBEB; 
@@ -197,6 +225,7 @@ $color_text-hover 			: #ff0202;
 		h3{
 			@include text($color_text, 24px, none, left, none, 300);
 			line-height: 40px;
+			font-family: Arial;
 		}
 	}
 	.content_block-news{

@@ -1,6 +1,11 @@
 @import "main.scss";
 $background_headertop		: #e8280b;
 $img_logo   				: url(../images/logo.svg);
+$img_logo-footer   			: url(../images/logo-footer.svg);
+$img_facebook               : url(../images/facebook.svg);
+$img_twitter                : url(../images/twitter.svg);
+$img_youtube                : url(../images/youtube.svg);
+$img_facebook               : url(../images/facebook.svg);
 
 $color_text-header       	: #fff;
 $color_text-header-hover    : black;
@@ -11,10 +16,14 @@ $color_text-time  			: #b7b7b7;
 
 $font_size-header			: 14px;
 $font_size-menu				: 16px;
+$font_size-footer           : 16px;
 
 
 $color_text       			: #181818;
 $color_text-hover 			: #ff0202;
+
+$color_background-footer    : #252525;
+$coler_text-footer          : #ACADB0;
 
 @mixin text ($color, $size, $decoration, $align, $transform, $weight) {
 	color: $color;
@@ -74,7 +83,8 @@ $color_text-hover 			: #ff0202;
 						height: 100%;
 						display: block;
 						padding: 25px 20px;
-						@include text($color_text-menu, $font_size-menu, none, center, uppercase, none);
+						// font-family: UniSansHeavy;
+						@include text($color_text-menu, $font_size-menu, none, center, uppercase, 100);
 						&:hover{
 							color: $color_text-menu-hover;
 						}
@@ -111,6 +121,7 @@ $color_text-hover 			: #ff0202;
 
 //--------------- MAIN ------------
 #main{
+	padding-bottom: 100px;
 	.main_top{
 		padding: 10px 0px 0px 0px;
 		overflow: hidden;
@@ -184,6 +195,12 @@ $color_text-hover 			: #ff0202;
 					li{
 						width: 100%;
 						.popular_horizontal{
+							.horizontal_left{
+								width: 35%;
+							}
+							.horizontal_right{
+								width: 60%;
+							}
 							.title_news{
 								a{
 									font-size: 14px;
@@ -265,7 +282,7 @@ $color_text-hover 			: #ff0202;
     						@include text($color_text, 16px, none, center, none, normal);
 						}
 						a{
-							@include text($color_text, 16px, none, center, none, normal);
+							@include text($color_text, 16px, none, left, none, normal);
 							line-height: 22px;
 							font-family: Roboto_Bold;
 							&:hover{
@@ -277,20 +294,25 @@ $color_text-hover 			: #ff0202;
 			}
 		}
 	}
-	.main_mid{
-		.news_slide{
-			.flexslider{
-				.flex-caption {
-					width: 96%;
-					padding: 2%;
-					left: 0;
-					bottom: 0;
-					background: rgba(0,0,0,.5);
-					color: #fff;
-					text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-					font-size: 14px;
-					line-height: 18px;
-			    }
+	.main_bottom{
+		.news_trending{
+			.content_news-trending{
+				width: 100%;
+				li{
+					float: left;
+					width: 22%;
+					margin-left: 3%;
+					margin-right: 0%;
+					&:first-child{
+						margin-left: 0px;
+					}
+					.list_news-trending{
+						li{
+							width: 100%;
+							margin-left: 0px;
+						}
+					}
+				}
 			}
 		}
 
@@ -334,19 +356,166 @@ $color_text-hover 			: #ff0202;
 			}
 		}
 
-		.news_trending{
-			.content_news-trending{
+		.news_category{
+			width: 70%;
+			float: left;
+			.list_news-category{
 				width: 100%;
 				li{
+					width: 30%;
 					float: left;
-					width: 25%;
-					margin-left: 5%;
+					margin-left: 3%;
+					.content_news-category{
+						.detail_news-category{
+							li{
+								width: 100%;
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.social_media{
+			width: 66%;
+			.content_block-news{
+				li{
+					width: 100%;
+					.horizontal_item{
+						.horizontal_left{
+							width: 35%;
+						}
+						.horizontal_right{
+							width: 60%;
+						}
+					}
 				}
 			}
 		}
 	}
-	
 }
 
+
 //--------------- FOOTER ------------
-#footer{}
+#footer{
+	background-color: $color_background-footer;
+	min-height: 350px;
+	.menu_footer{
+		width: 100%;
+		overflow: hidden;
+		padding: 20px 0px;
+		border-bottom: 1px solid red;
+		li{
+			width: 14%;
+			margin-left: 2%;
+			float: left;
+			border-left: 1px solid #fff;
+			a{
+				padding: 10px 0px;
+				@include text(#fff, 14px, none, center, uppercase, 300);
+				&:hover{
+					color: $color_text-hover;
+				}
+			}
+		}
+	}
+	.footer_top{
+		padding: 40px 0px 20px 0px;
+		.content_footer-top{
+			width: 100%;
+			li{
+				width: 30%;
+				float: left;
+				margin-left: 3%;
+				&:first-child{
+					margin-left: 0px;
+				}
+				.infor{
+					padding-bottom: 20px;
+					border-bottom: 2px solid #2e2e2e;
+					.logo_footer{
+						a{
+							background: $img_logo-footer no-repeat center top;
+							width: 190px;
+							height: 33px;
+							display: block;
+							padding-bottom: 20px;
+						}
+					}
+					.slogan_footer{
+						@include text($coler_text-footer, $font_size-footer, none, left, none, none);
+					}
+				}
+				.follow_us{
+					width: 200px;
+					overflow: hidden;
+					margin: 10px 0px;
+					p{
+						@include text(#fff, 12px , none, left, none, bold);
+						margin: 10px 0px 20px 0px;
+					}
+					li{
+						float: left;
+						width: 22%;
+						margin-left: 2%;
+						&:nth-child(1){
+							margin-left: 0%;
+						}
+						a{
+							position: relative;
+							display: block;
+							width: 40px;
+							height: 40px;
+							background-color: #333333;
+							border-radius: 5px;
+						}
+						.facebook_icon{
+							&:after{
+								width: 10px;
+								height: 20px;
+								display: block;
+								content: "";
+								background-image: $img_facebook ;
+								background-repeat: no-repeat;
+								background-position: center top;
+								position: absolute;
+								top: 10px;
+								left: 15px;
+							}
+								
+						}
+						.youtube_icon{
+							&:after{
+								width: 20px;
+								height: 15px;
+								display: block;
+								content: "";
+								background-image: url(../images/youtube.svg);
+								background-repeat: no-repeat;
+								background-position: center top;
+								position: absolute;
+								top: 13px;
+								left: 10px;
+							}
+						}
+						.twitter_icon{
+							&:after{
+								width: 20px;
+								height: 16px;
+								display: block;
+								content: "";
+								background-image: url(../images/twitter.svg);
+								background-repeat: no-repeat;
+								background-position: center top;
+								position: absolute;
+								top: 12px;
+								left: 11px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
