@@ -13,6 +13,7 @@
 				<div class="container">
 					<div class="logo">
 						<a href=""></a>
+						<p>Đưa thông tin hữu ích đến bạn</p>
 					</div>
 					<ul class="header_login">
 						<li><a href="">Login</a></li>
@@ -23,13 +24,19 @@
 			<div class="header_bottom">
 				<div class="container">
 					<nav class="header_menu">
-						<ul>
+						<ul class="menu_short">
 							<li><a href="">Thời sự</a></li>
 							<li><a href="">Thế giới</a></li>
 							<li><a href="">Kinh doanh</a></li>
 							<li><a href="">Pháp luật</a></li>
 							<li><a href="">Giải trí</a></li>
 							<li><a href="">Thể thao</a></li>
+							<!-- <li><a class="menu_toggle"></a></li> -->
+							<li>
+								<div class="menu_toggle on">
+									<span></span>	
+								</div>
+							</li>
 						</ul>
 					</nav>
 					<form class="header_search">
@@ -37,6 +44,62 @@
 						<input type="button" name="btn_search" value="" class="btn_search">
 					</form>
 				</div>
+				<nav class="menu_long">
+					<div class="container">
+						<ul>
+							<li>
+								<ul class="submenu_header">
+									<h4>Tin tức</h4>
+									<li><a href="">Thế giới</a></li>
+									<li><a href="">Trong nước</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="submenu_header">
+									<h4>Tin tức</h4>
+									<li><a href="">Thế giới</a></li>
+									<li><a href="">Trong nước</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="submenu_header">
+									<h4>Tin tức</h4>
+									<li><a href="">Thế giới</a></li>
+									<li><a href="">Trong nước</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="submenu_header">
+									<h4>Tin tức</h4>
+									<li><a href="">Thế giới</a></li>
+									<li><a href="">Trong nước</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="submenu_header">
+									<h4>Tin tức</h4>
+									<li><a href="">Thế giới</a></li>
+									<li><a href="">Trong nước</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="submenu_header">
+									<h4>Tin tức</h4>
+									<li><a href="">Thế giới</a></li>
+									<li><a href="">Trong nước</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="submenu_header">
+									<h4>Tin tức</h4>
+									<li><a href="">Thế giới</a></li>
+									<li><a href="">Trong nước</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				
 			</div>
 		</header>
 		<section id="main" class="main">
@@ -44,7 +107,7 @@
 				<div class="container">
 					<div class="main_top-left">
 						<!-- TIN NÓNG -->
-						<div class="news_hot">
+						<div class="block_category news_hot">
 							<div class="content_left">
 								<div class="vertical_item hot_item">
 									<div class="images_news">
@@ -113,10 +176,8 @@
 							</div>
 						</div>
 
-
-
 						<!-- TIN NỔI BẬT -->
-						<div class="block_news news_highlights">
+						<div class="block_news block_category news_highlights">
 							<div class="title_block-news">
 								<h3>Tin nổi bật</h3>
 							</div>
@@ -212,7 +273,7 @@
 						</div>
 
 						<!-- TIN TIÊU BIỂU -->
-						<div class="block_news news_picks">
+						<div class="block_news block_category news_picks">
 							<div class="title_block-news">
 								<h3>Tin tiêu biểu</h3>
 							</div>
@@ -227,8 +288,13 @@
 											</div>
 										</div>
 										<div class="horizontal_right">
-											<div class="category_news">
-												<a href="">Đời sống</a>
+											<div class="infor_news">
+												<div class="category_news">
+													<a href="">Đời sống</a>
+												</div>
+												<div class="time_news">
+													<p>09/11/2016</p>
+												</div>
 											</div>
 											<div class="title_news">
 												<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
@@ -256,8 +322,13 @@
 											</div>
 										</div>
 										<div class="horizontal_right">
-											<div class="category_news">
-												<a href="">Đời sống</a>
+											<div class="infor_news">
+												<div class="category_news">
+													<a href="">Đời sống</a>
+												</div>
+												<div class="time_news">
+													<p>09/11/2016</p>
+												</div>
 											</div>
 											<div class="title_news">
 												<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
@@ -285,8 +356,13 @@
 											</div>
 										</div>
 										<div class="horizontal_right">
-											<div class="category_news">
-												<a href="">Đời sống</a>
+											<div class="infor_news">
+												<div class="category_news">
+													<a href="">Đời sống</a>
+												</div>
+												<div class="time_news">
+													<p>09/11/2016</p>
+												</div>
 											</div>
 											<div class="title_news">
 												<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
@@ -307,7 +383,7 @@
 						</div>
 
 						<!-- TIN PHỔ BIẾN -->
-						<div class="block_news news_popular">
+						<div class="block_news block_category news_popular">
 							<div class="title_block-news">
 								<h3>Tin phổ biến</h3>
 							</div>
@@ -687,192 +763,8 @@
 					</div>
 				</div>
 
-				<!-- <div class="container">
-					<div class="news_category">
-						<ul class="list_news-category">
-							<li>
-								<div class="block_news content_news-category">
-									<div class="title_block-news">
-										<h3>Thế giới</h3>
-									</div>
-									<ul class="content_block-news detail_news-category">
-										<li>
-											<div class="vertical_item">
-												<div class="images_news">
-													<a href="">
-														<img src="images/thumb/7.jpg">
-													</a>
-												</div>
-												<div class="time_news">
-													<p>6/10/2013</p>
-												</div>
-												<div class="title_news">
-													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
-												</div>
-												<div class="post_news">
-													<span class="author_news">
-														By
-														<a href="">Kênh 14</a>
-													</span>
-												</div>
-											</div>
-
-											<ul class="list_news-different">
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<div class="block_news content_news-category">
-									<div class="title_block-news">
-										<h3>Thế giới</h3>
-									</div>
-									<ul class="content_block-news detail_news-category">
-										<li>
-											<div class="vertical_item">
-												<div class="images_news">
-													<a href="">
-														<img src="images/thumb/7.jpg">
-													</a>
-												</div>
-												<div class="time_news">
-													<p>6/10/2013</p>
-												</div>
-												<div class="title_news">
-													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
-												</div>
-												<div class="post_news">
-													<span class="author_news">
-														By
-														<a href="">Kênh 14</a>
-													</span>
-												</div>
-											</div>
-
-											<ul class="list_news-different">
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<div class="block_news content_news-category">
-									<div class="title_block-news">
-										<h3>Thế giới</h3>
-									</div>
-									<ul class="content_block-news detail_news-category">
-										<li>
-											<div class="vertical_item">
-												<div class="images_news">
-													<a href="">
-														<img src="images/thumb/7.jpg">
-													</a>
-												</div>
-												<div class="time_news">
-													<p>6/10/2013</p>
-												</div>
-												<div class="title_news">
-													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
-												</div>
-												<div class="post_news">
-													<span class="author_news">
-														By
-														<a href="">Kênh 14</a>
-													</span>
-												</div>
-											</div>
-
-											<ul class="list_news-different">
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-
-												<li>
-													<div class="news_normal">
-														<p class="time_news-normal">
-															14/10/2014
-														</p>
-														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
-													</div>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div> -->
-
 				<div class="container">
-					<div class="block_news news_trending">
+					<!-- <div class="block_news news_trending">
 						<div class="title_block-news">
 							<h3>Xu hướng đọc</h3>
 						</div>
@@ -1072,9 +964,9 @@
 								</ul>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 
-					<div class="block_news social_media">
+					<div class="block_news block_category social_media">
 						<ul class="content_block-news">
 								<li>
 									<div class="horizontal_item">
@@ -1086,9 +978,15 @@
 											</div>
 										</div>
 										<div class="horizontal_right">
-											<div class="category_news">
-												<a href="">Đời sống</a>
+											<div class="infor_news">
+												<div class="category_news">
+													<a href="">Đời sống</a>
+												</div>
+												<div class="time_news">
+													<p>09/11/2016</p>
+												</div>
 											</div>
+											
 											<div class="title_news">
 												<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
 											</div>
@@ -1115,8 +1013,13 @@
 											</div>
 										</div>
 										<div class="horizontal_right">
-											<div class="category_news">
-												<a href="">Đời sống</a>
+											<div class="infor_news">
+												<div class="category_news">
+													<a href="">Đời sống</a>
+												</div>
+												<div class="time_news">
+													<p>09/11/2016</p>
+												</div>
 											</div>
 											<div class="title_news">
 												<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
@@ -1144,8 +1047,13 @@
 											</div>
 										</div>
 										<div class="horizontal_right">
-											<div class="category_news">
-												<a href="">Đời sống</a>
+											<div class="infor_news">
+												<div class="category_news">
+													<a href="">Đời sống</a>
+												</div>
+												<div class="time_news">
+													<p>09/11/2016</p>
+												</div>
 											</div>
 											<div class="title_news">
 												<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
@@ -1164,31 +1072,346 @@
 								</li>
 						</ul>
 					</div>
+
+					<div class="news_category">
+						<ul class="list_news-category">
+							<li>
+								<div class="block_news content_news-category">
+									<div class="title_block-news">
+										<h3>Thế giới</h3>
+									</div>
+									<ul class="content_block-news detail_news-category">
+										<li>
+											<div class="vertical_item">
+												<div class="images_news">
+													<a href="">
+														<img src="images/thumb/7.jpg">
+													</a>
+												</div>
+												<div class="time_news">
+													<p>6/10/2013</p>
+												</div>
+												<div class="title_news">
+													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
+												</div>
+												<div class="post_news">
+													<span class="author_news">
+														By
+														<a href="">Kênh 14</a>
+													</span>
+												</div>
+											</div>
+
+											<ul class="list_news-different">
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="block_news content_news-category">
+									<div class="title_block-news">
+										<h3>Thế giới</h3>
+									</div>
+									<ul class="content_block-news detail_news-category">
+										<li>
+											<div class="vertical_item">
+												<div class="images_news">
+													<a href="">
+														<img src="images/thumb/7.jpg">
+													</a>
+												</div>
+												<div class="time_news">
+													<p>6/10/2013</p>
+												</div>
+												<div class="title_news">
+													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
+												</div>
+												<div class="post_news">
+													<span class="author_news">
+														By
+														<a href="">Kênh 14</a>
+													</span>
+												</div>
+											</div>
+
+											<ul class="list_news-different">
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="block_news content_news-category">
+									<div class="title_block-news">
+										<h3>Thế giới</h3>
+									</div>
+									<ul class="content_block-news detail_news-category">
+										<li>
+											<div class="vertical_item">
+												<div class="images_news">
+													<a href="">
+														<img src="images/thumb/7.jpg">
+													</a>
+												</div>
+												<div class="time_news">
+													<p>6/10/2013</p>
+												</div>
+												<div class="title_news">
+													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
+												</div>
+												<div class="post_news">
+													<span class="author_news">
+														By
+														<a href="">Kênh 14</a>
+													</span>
+												</div>
+											</div>
+
+											<ul class="list_news-different">
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="block_news content_news-category">
+									<div class="title_block-news">
+										<h3>Kinh tế</h3>
+									</div>
+									<ul class="content_block-news detail_news-category">
+										<li>
+											<div class="vertical_item">
+												<div class="images_news">
+													<a href="">
+														<img src="images/thumb/1.jpg">
+													</a>
+												</div>
+												<div class="time_news">
+													<p>6/10/2013</p>
+												</div>
+												<div class="title_news">
+													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
+												</div>
+												<div class="post_news">
+													<span class="author_news">
+														By
+														<a href="">Kênh 14</a>
+													</span>
+												</div>
+											</div>
+
+											<ul class="list_news-different">
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="block_news content_news-category">
+									<div class="title_block-news">
+										<h3>Xã hội</h3>
+									</div>
+									<ul class="content_block-news detail_news-category">
+										<li>
+											<div class="vertical_item">
+												<div class="images_news">
+													<a href="">
+														<img src="images/thumb/2.jpg">
+													</a>
+												</div>
+												<div class="time_news">
+													<p>6/10/2013</p>
+												</div>
+												<div class="title_news">
+													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
+												</div>
+												<div class="post_news">
+													<span class="author_news">
+														By
+														<a href="">Kênh 14</a>
+													</span>
+												</div>
+											</div>
+
+											<ul class="list_news-different">
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="block_news content_news-category">
+									<div class="title_block-news">
+										<h3>Văn hóa</h3>
+									</div>
+									<ul class="content_block-news detail_news-category">
+										<li>
+											<div class="vertical_item">
+												<div class="images_news">
+													<a href="">
+														<img src="images/thumb/3.jpg">
+													</a>
+												</div>
+												<div class="time_news">
+													<p>6/10/2013</p>
+												</div>
+												<div class="title_news">
+													<a href="">Sao bây giờ lại có nhiều thầy giáo đẹp trai quá vậy???</a>
+												</div>
+												<div class="post_news">
+													<span class="author_news">
+														By
+														<a href="">Kênh 14</a>
+													</span>
+												</div>
+											</div>
+
+											<ul class="list_news-different">
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+
+												<li>
+													<div class="news_normal">
+														<p class="time_news-normal">
+															14/10/2014
+														</p>
+														<a class="title_news-normal" href=""> Ngồi lướt web, giật mình phát hiện ra con trai đang phát trực tiếp cảnh tự tử trên</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
 		<footer id="footer" class="footer">
-			<ul class="menu_footer">
+			<div class="begin_footer">
 				<div class="container">
-					<li><a href="">Thời sự</a></li>
-					<li><a href="">Thế giới</a></li>
-					<li><a href="">Kinh doanh</a></li>
-					<li><a href="">Pháp luật</a></li>
-					<li><a href="">Giải trí</a></li>
-					<li><a href="">Thể thao</a></li>
+					<div class="begin_footer-top">
+						<div class="logo_footer">
+							<a href=""></a>
+							<p>Đưa thông tin hữu ích đến bạn</p>
+						</div>
+						<form class="footer_search">
+							<input type="text" name="text_search" class="text_search" placeholder="Tìm kiếm">
+							<input type="button" name="btn_search" value="" class="btn_search">
+						</form>
+					</div>
+					<ul class="menu_footer">
+						<li><a href="">Thời sự</a></li>
+						<li><a href="">Thế giới</a></li>
+						<li><a href="">Kinh doanh</a></li>
+						<li><a href="">Pháp luật</a></li>
+						<li><a href="">Giải trí</a></li>
+						<li><a href="">Thể thao</a></li>
+					</ul>
 				</div>
-			</ul>
+			</div>
+			
 			<div class="container">
-				<div class="footer_top">
+				<div class="main_footer">
 					<ul class="content_footer-top">
 						<li>
 							<div class="infor">
-								<div class="logo_footer">
-									<a href=""></a>
-								</div>
-								<p class="slogan_footer">
-									Thông tin nhanh, chính xác đến bạn
-								</p>
+								<p>Copyright 2008 - 2016 - Công ty Cổ phần VCCorp
+								Tầng 17, 19, 20, 21 Toà nhà Center Building - Hapulico Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.</p>
+								<p>Trang tin điện tử trên internet: Giấy phép số 460/GP-TTĐT do Sở Thông tin và Truyền thông Hà Nội cấp ngày 03/02/2016</p>
 							</div>
 
 							<ul class="follow_us">
@@ -1209,9 +1432,6 @@
 	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
 	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript">
-		$(function(){
-			SyntaxHighlighter.all();
-		});
 		$(window).load(function(){
 			$('.flexslider').flexslider({
 			animation: "slide",
@@ -1225,6 +1445,20 @@
 			$.mCustomScrollbar.defaults.axis="yx";
 			$(".video_news-hot .video_news .list_video").mCustomScrollbar();
 		});
+		
+		var btnToggle = $('.menu_toggle');
+		var menubox = $('.menu_long');
+		btnToggle.unbind('click').bind('click',function(e){
+			if(btnToggle.hasClass('on')) {
+				menubox.show();
+				btnToggle.removeClass('on');
+			}
+			else {
+				menubox.hide();
+				btnToggle.addClass('on');
+			}
+		});
+			
 	</script>
 </body>
 </html>

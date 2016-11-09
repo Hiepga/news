@@ -7,13 +7,6 @@ $img_twitter                : url(../images/twitter.svg);
 $img_youtube                : url(../images/youtube.svg);
 $img_facebook               : url(../images/facebook.svg);
 
-$color_text-header       	: #fff;
-$color_text-header-hover    : black;
-$color_text-menu			: #181818;
-$color_text-menu-hover		: #e8280b;
-$color_text-footer			: #b0b1b4;
-$color_text-time  			: #b7b7b7;
-
 $font_size-header			: 14px;
 $font_size-menu				: 16px;
 $font_size-footer           : 16px;
@@ -22,8 +15,17 @@ $font_size-footer           : 16px;
 $color_text       			: #181818;
 $color_text-hover 			: #ff0202;
 
+$color_text-header       	: #fff;
+$color_text-header-hover    : black;
+
+$color_text-menu			: #181818;
+$color_text-menu-hover		: #e8280b;
+
+$color_text-time  			: #b7b7b7;
+
 $color_background-footer    : #252525;
 $coler_text-footer          : #ACADB0;
+$color_text-copyright       : #999;
 
 @mixin text ($color, $size, $decoration, $align, $transform, $weight) {
 	color: $color;
@@ -45,9 +47,14 @@ $coler_text-footer          : #ACADB0;
 			float: left;
 			a{
 				background: $img_logo no-repeat center top;
+				background-size: contain;
 				width: 235px;
-				height: 45px;
+				height: 40px;
 				display: block;
+			}
+			p{
+				padding: 0px 0px 0px 65px;
+				@include text($color_text-header, 10px, none, center, uppercase, 300);
 			}
 		}
 		.header_login{
@@ -76,17 +83,59 @@ $coler_text-footer          : #ACADB0;
 		overflow: hidden;
 		.header_menu{
 			float: left;
-			ul{
+			.menu_short{
 				li{
 					float: left;
 					a{
 						height: 100%;
 						display: block;
 						padding: 25px 20px;
-						// font-family: UniSansHeavy;
 						@include text($color_text-menu, $font_size-menu, none, center, uppercase, 100);
 						&:hover{
 							color: $color_text-menu-hover;
+						}
+					}
+					.menu_toggle{
+						width: 50px;
+						height: 20px;
+						margin: 30px 0px 0px 10px;
+						cursor: pointer;
+						&.on{
+							span{
+								background-color: #888;
+								transition: all 0.3s;
+								&:after, &:before{
+									transform: inherit;
+								}
+								&:after{
+									top: 10px;
+								}
+							}	
+						}
+						span{
+							background-color: transparent;
+							position: relative;
+							display: block;
+							width: 80%;
+							height: 7px;
+							backface-visibility: hidden;
+							border-radius: 2px;
+							&:after, &:before{
+								content: "";
+								position: absolute;
+								left: 0;
+								top: -10px;
+								width: 100%;
+								background-color: #888;
+								transition: all 0.3s;
+								backface-visibility: hidden;
+								border-radius: 2px;
+								height: 7px;
+								transform: rotate(45deg) translate(5px, 8px);
+							}
+							&:after {
+								transform: rotate(-45deg) translate(-8px, 4px);
+							}
 						}
 					}
 				}
@@ -116,6 +165,54 @@ $coler_text-footer          : #ACADB0;
 				background: transparent;
 			}
 		}
+		.menu_long{
+			width: 100%;
+			overflow: hidden;
+			position: absolute;
+			padding: 20px 0px 40px 0px;
+			top: 165px;
+			z-index: 5;
+			background-color: rgba(0, 0, 0, 0.82);
+			display: none;
+			ul{
+				width: 100%;
+				height: auto;
+				margin: 0px auto;
+				li{
+					width: 10%;
+					float: left;
+					margin-left: 2%;
+					border-right: 1px solid white;
+					text-align: center;
+					&:last-child{
+						border-right: none;
+					}
+					.submenu_header{
+						h4{
+							padding: 10px 0px;
+							@include text($color_text-header, 16px, none, left, none, 100);
+							// border-bottom: 1px dotted white;
+						}
+						li{
+							width: 100%;
+							border-right: none;
+							text-align: center;
+							padding: 10px 0px;
+							list-style-type: initial;
+							color: $color_text-header;
+							margin-left: 20px;
+							a{
+								@include text($color_text-header, 14px, none, left, none, 100);
+								&:hover{
+									color: $color_text-menu-hover;
+								}
+							}
+						}
+					}
+
+				}
+			}
+		}
 	}
 }
 
@@ -123,13 +220,16 @@ $coler_text-footer          : #ACADB0;
 #main{
 	padding-bottom: 100px;
 	.main_top{
-		padding: 10px 0px 0px 0px;
+		padding: 30px 0px 0px 0px;
 		overflow: hidden;
 		.main_top-left{
 			width: 65%;
 			float: left;
 			.news_hot{
-				overflow: hidden;
+				padding-bottom: 40px;
+				.vertical_item{
+					padding: 0px;
+				}
 				.content_left{
 					float: left;
 					width: 65%;
@@ -174,6 +274,7 @@ $coler_text-footer          : #ACADB0;
 				}
 			}
 			.news_popular{
+				background: none;
 				.left_news-popular{
 					width: 50%;
 					float: left;
@@ -296,6 +397,9 @@ $coler_text-footer          : #ACADB0;
 	}
 	.main_bottom{
 		.news_trending{
+			border-top: none;
+			padding: 0px 0px 10px 0px;
+			background: url(../images/lapgachcathome.png) repeat-x center bottom;
 			.content_news-trending{
 				width: 100%;
 				li{
@@ -362,14 +466,35 @@ $coler_text-footer          : #ACADB0;
 			.list_news-category{
 				width: 100%;
 				li{
-					width: 30%;
+					width: 29%;
 					float: left;
 					margin-left: 3%;
+					border-right: 1px dotted #c6c6c6;
+					padding-right: 2%;
+					margin-top: 10px;
+					&:nth-child(3n+1){
+						margin-left: 0px;
+					}
+
+					&:nth-child(n+4){
+						border-top: 1px dotted #c6c6c6;
+					}
 					.content_news-category{
+						border-top: none;
+						.title_block-news{
+							h3{
+								@include text($color_text, 14px, none, left, uppercase, none);
+								line-height: 18px;
+							}
+						}
 						.detail_news-category{
 							li{
 								width: 100%;
 								margin: 0;
+								border: none;
+								.vertical_item{
+									padding: 10px 0px;
+								}
 							}
 						}
 					}
@@ -378,7 +503,7 @@ $coler_text-footer          : #ACADB0;
 		}
 
 		.social_media{
-			width: 66%;
+			width: 70%;
 			.content_block-news{
 				li{
 					width: 100%;
@@ -396,55 +521,97 @@ $coler_text-footer          : #ACADB0;
 	}
 }
 
-
 //--------------- FOOTER ------------
 #footer{
 	background-color: $color_background-footer;
 	min-height: 350px;
-	.menu_footer{
-		width: 100%;
-		overflow: hidden;
+	font-family: tahoma;
+	.begin_footer{
 		padding: 20px 0px;
 		border-bottom: 1px solid red;
-		li{
-			width: 14%;
-			margin-left: 2%;
-			float: left;
-			border-left: 1px solid #fff;
-			a{
-				padding: 10px 0px;
-				@include text(#fff, 14px, none, center, uppercase, 300);
-				&:hover{
-					color: $color_text-hover;
+		.menu_footer{
+			width: 100%;
+			overflow: hidden;
+			margin: 0px auto;
+			padding: 15px 0px 0px 0px;
+			li{
+				width: 8%;
+				margin-left: 2%;
+				float: left;
+				a{
+					padding: 5px 0px;
+					@include text(#fff, 14px, none, center, uppercase, 300);
+					&:hover{
+						color: $color_text-hover;
+					}
 				}
 			}
 		}
+		.begin_footer-top{
+			overflow: hidden;
+			padding: 10px 0px 20px 0px;
+			border-bottom: 1px solid #333;
+
+			.logo_footer{
+				float: left;
+				a{
+					background: $img_logo-footer no-repeat center top;
+					width: 190px;
+					height: 33px;
+					display: block;
+				}
+				p{
+					padding: 5px 0px 0px 20px;
+					@include text(#fff, 10px, none, center, uppercase, 300);
+				}
+			}
+			.footer_search{
+				float: right;
+				border: 1px solid #cecece;
+				border-radius: 15px;
+				padding: 0px 15px;
+				margin: 0px 30px 0px 0px;
+				background-color: #404040;
+				height: 35px;
+				.text_search{
+					border: none;
+					padding: 0px 5px;
+					float: left;
+					background-color: #404040;
+					height: 100%;
+					@include text(#fff, 14px , none, center, none, normal);
+				}
+				.btn_search{
+					border: none;
+					position: relative;
+					float: left;
+					cursor: pointer;
+					font-family: "FontAwesome";
+					height: 100%;
+					width: 48px;
+					background: transparent;
+					@include text(#fff, 18px , none, center, none, normal);
+				}
+			}
+		}		
 	}
-	.footer_top{
+	
+	.main_footer{
 		padding: 40px 0px 20px 0px;
 		.content_footer-top{
 			width: 100%;
 			li{
-				width: 30%;
+				width: 45%;
 				float: left;
 				margin-left: 3%;
 				&:first-child{
 					margin-left: 0px;
 				}
 				.infor{
-					padding-bottom: 20px;
-					border-bottom: 2px solid #2e2e2e;
-					.logo_footer{
-						a{
-							background: $img_logo-footer no-repeat center top;
-							width: 190px;
-							height: 33px;
-							display: block;
-							padding-bottom: 20px;
-						}
-					}
-					.slogan_footer{
-						@include text($coler_text-footer, $font_size-footer, none, left, none, none);
+					p{
+						@include text($color_text-copyright , 12px, none, left, none, 300);
+						line-height: 22px;
+						font-family: tahoma;
 					}
 				}
 				.follow_us{
