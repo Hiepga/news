@@ -43,7 +43,6 @@ a{display: block;}
 		width: 85%;
 		height: auto;
 		margin: 0px auto;
-		// overflow: hidden;
 	}
 }
 
@@ -259,4 +258,47 @@ a{display: block;}
 	border-top: none;
 	overflow: hidden;
 	background: url(../images/lapgachcathome.png) repeat-x center bottom;
+}
+
+//----------- SLIDE NEWS  ------------
+.block_news-different{
+	padding: 10px 5px;
+	margin: 10px auto;
+	background-color: black;
+	color: white;
+	.vertical_item{
+		.title_news{
+			a{
+				color: #fff !important;
+			}
+		}
+	}
+	.post_news {
+		.author_news{
+			color: #fff !important;
+		}
+	}
+}
+
+
+//------------ ADS  ---------------
+.ads1{
+	position: absolute;
+	top: 1660px;
+	right: 120px;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.ads2{
+	height: auto;
+	position: absolute;
+	top: 3350px;
+	right: 120px;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
 }

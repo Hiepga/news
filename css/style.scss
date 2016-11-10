@@ -86,16 +86,16 @@ $color_text-copyright       : #999;
 			float: left;
 			width: 75%;
 			.menu_short{
+				position: relative;
 				li{
 					float: left;
 					width: 16%;
-					position: relative;
 					.submenu{
 						width: 1348px;
 						height: auto;
 						position: absolute;
-						left: -238px;
-						display: block;
+						left: -106px;
+						display: none;
 						background-color: #f5f5f5;
 						z-index: 5;
 						li{
@@ -172,8 +172,7 @@ $color_text-copyright       : #999;
 
 //--------------- MAIN ------------
 #main{
-	padding-bottom: 100px;
-	overflow: hidden;
+	
 	.main_top{
 		padding: 30px 0px 0px 0px;
 		overflow: hidden;
@@ -351,6 +350,8 @@ $color_text-copyright       : #999;
 		}
 	}
 	.main_bottom{
+		padding-bottom: 100px;
+		overflow: hidden;
 		.news_trending{
 			border-top: none;
 			padding: 0px 0px 10px 0px;
@@ -472,6 +473,12 @@ $color_text-copyright       : #999;
 					}
 				}
 			}
+		}
+
+		.block_news-different{
+			width: 67%;
+			float: left;
+			padding: 20px 15px;
 		}
 	}
 }
