@@ -24,6 +24,15 @@ $color_text-hover 			: #ff0202;
 
 $color_border   			: #eaeaea;
 
+$font_size-time                 : 14px; 
+$font_size-category   			: 10px;
+$font_size-title      			: 16px;
+$font_size-author     			: 12px;
+$font_size-content              : 16px; 
+$font_size-time-horizontal      : 10px;
+
+$line_height                    :22px;       
+
 
 @mixin text ($color, $size, $decoration, $align, $transform, $weight) {
 	color: $color;
@@ -71,22 +80,22 @@ a{display: block;}
 	}
 
 	.time_news{
-		@include text($color_text-time, 14px, none, left, uppercase, none);
+		@include text($color_text-time, $font_size-time , none, left, uppercase, none);
 		padding: 5px 0px;
 	}
 
 	.category_news{
 		a{
 		    display: inline-block;
-		    line-height: 21px;
-		    @include text($color_text-category, 10px, none, left, uppercase, 700);
+		    line-height: $line_height;
+		    @include text($color_text-category, $font_size-category , none, left, uppercase, 700);
 		}
 	}
 
 	.title_news{
 		a{
-			@include text($color_text, 16px, none, left, uppercase, normal);
-			line-height: 27px;
+			@include text($color_text, $font_size-title, none, left, uppercase, normal);
+			line-height: $line_height;
 			font-family: Roboto_Bold;
 			&:hover{
 				color: $color_text-hover ;
@@ -100,7 +109,7 @@ a{display: block;}
 
 	.post_news{
 		.author_news{
-			@include text($color_text, 12px, none, left, uppercase, normal);
+			@include text($color_text, $font_size-author, none, left, uppercase, normal);
 			display: block;
 			padding: 5px 0 0 0;
 			a{
@@ -156,16 +165,16 @@ a{display: block;}
 				float: left;
 				a{
 				    display: inline-block;
-				    line-height: 21px;
-				    @include text($color_text-category, 10px, none, left, uppercase, 700);
+				    line-height: $line_height;
+				    @include text($color_text-category, $font_size-category, none, left, uppercase, 700);
 				}
 			}
 			.time_news{
 				float: left;
 				margin-left: 10px;
 				p{
-					@include text($color_text-time, 10px, none, left, uppercase, 700);
-					line-height: 21px;
+					@include text($color_text-time, $font_size-time-horizontal, none, left, uppercase, 700);
+					line-height: $line_height;
 				}
 			}
 		}
@@ -173,8 +182,8 @@ a{display: block;}
 
 		.title_news{
 			a{
-				@include text($color_text, 18px, none, left, uppercase, normal);
-				line-height: 27px;
+				@include text($color_text, $font_size-title , none, left, uppercase, normal);
+				line-height: $line_height;
 				font-family: Roboto_Bold;
 				&:hover{
 					color: $color_text-hover ;
@@ -184,16 +193,16 @@ a{display: block;}
 
 		.content_news{
 			font-family: Roboto_Regular;
-			@include text($color_text, 18px, none, left, none, normal);
-			line-height: 27px;
+			@include text($color_text, $font_size-content , none, left, none, normal);
+			line-height: $line_height;
 		}
 
 		.post_news{
 			.author_news{
-				@include text($color_text, 12px, none, left, uppercase, normal);
+				@include text($color_text, $font_size-author, none, left, uppercase, normal);
 				display: block;
 				padding: 5px 0 0 0;
-				line-height: 24px;
+				line-height: $line_height;
 				a{
 					color: $color_text-hover;
 					display: inline-block;
@@ -219,7 +228,7 @@ a{display: block;}
 	}
 	.title_news-normal{
 		@include text($color_text, 14px, none, left, none, normal);
-		line-height: 22px;
+		line-height: $line_height;
 		font-family: Roboto_Regular;
 		&:hover{
 			color: $color_text-hover ;

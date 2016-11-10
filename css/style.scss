@@ -172,6 +172,8 @@ $color_text-copyright       : #999;
 
 //--------------- MAIN ------------
 #main{
+	overflow: hidden;
+
 	
 	.main_top{
 		padding: 30px 0px 0px 0px;
@@ -179,30 +181,145 @@ $color_text-copyright       : #999;
 		.main_top-left{
 			width: 65%;
 			float: left;
-			.news_hot{
-				padding-bottom: 40px;
-				.vertical_item{
-					padding: 0px;
+			.block_news-different{
+				width: 100%;
+			}	
+		}
+		.main_top-right{
+			width: 33%;
+			float: right;
+		}
+	}
+	.main_bottom{
+		padding-bottom: 100px;
+		overflow: hidden;	
+	}
+	.main_left{
+		width: 65%;
+		float: left;
+	}
+	.main_right{
+		width: 30%;
+		float: left;
+		margin-left: 3%
+	}
+//------------- TIN NÓNG --------------------
+	.news_hot{
+		padding-bottom: 20px;
+		.vertical_item{
+			padding: 0px;
+		}
+		.content_left{
+			float: left;
+			width: 65%;
+			.hot_item{
+				.category_news{
+					a{
+						padding: 5px 0px; 
+					}
 				}
-				.content_left{
-					float: left;
-					width: 65%;
-					.hot_item{
-						.category_news{
-							a{
-								padding: 5px 0px; 
-							}
+				.title_news{
+					a{
+						font-size: 30px;
+						line-height: 36px;
+					}
+				}
+				.content_news{
+					font-size: 16px;
+					line-height: 22px;
+					padding: 10px 0px;
+				}
+				.post_news{
+					.author_news{
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.content_right{
+			float: right;
+			width: 33%;
+			.vertical_item {
+			    padding: 20px 0px;
+			    &:first-child{
+			    	padding: 0px;
+			    }
+			}
+		}
+	}
+//------------ TIN NỔI BẬT ---------------------
+	.news_highlights{
+		.content_block-news{
+		}
+	}
+//----------- TIN TIÊU BIỂU-----------------
+	.news_picks{
+		width: 100%;
+		.content_block-news{
+			li{
+				width: 100%;
+			}
+		}
+	}
+//------------ TIN PHỔ BIẾN ----------------
+	.news_popular{
+		background: none;
+		.left_news-popular{
+			width: 50%;
+			float: left;
+			.popular_vertical{
+				.content_news{
+					line-height: 24px;
+				}
+				.post_news{
+					.author_news{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.right_news-popular{
+			width: 48%;
+			float: left;
+			margin-left: 2%;
+			li{
+				width: 100%;
+				.popular_horizontal{
+					.horizontal_left{
+						width: 35%;
+					}
+					.horizontal_right{
+						width: 60%;
+					}
+					.title_news{
+						a{
+							font-size: 14px;
+							line-height: 18px;
 						}
+					}
+				}
+			}
+		}
+	}
+// --------------TIN PHỔ BIẾN------------------
+	.news_recent{
+		border: 1px solid #EBEBEB;
+		overflow: hidden;
+		padding: 0px 20px 20px 20px;
+		.content_news-recent{
+			li{
+				width: 100%;
+				.horizontal_news-recent{
+					.horizontal_left{
+						width: 33%;
+					}
+					.horizontal_right{
+						width: 64%;
 						.title_news{
 							a{
-								font-size: 34px;
-								line-height: 42px;
+								font-size: 14px;
+								line-height: 16px;
 							}
-						}
-						.content_news{
-							font-size: 16px;
-							line-height: 24px;
-							padding: 10px 0px;
 						}
 						.post_news{
 							.author_news{
@@ -210,138 +327,115 @@ $color_text-copyright       : #999;
 							}
 						}
 					}
+
 				}
-				.content_right{
-					float: right;
-					width: 33%;
-				}
-			}
-			.news_highlights{
-				.content_block-news{
-				}
-			}
-			.news_picks{
-				.content_block-news{
-					li{
-						width: 100%;
-					}
-				}
-			}
-			.news_popular{
-				background: none;
-				.left_news-popular{
-					width: 50%;
-					float: left;
-					.popular_vertical{
-						.content_news{
-							line-height: 24px;
-						}
-						.post_news{
-							.author_news{
-								font-size: 14px;
-							}
-						}
-					}
-				}
-				.right_news-popular{
-					width: 48%;
-					float: left;
-					margin-left: 2%;
-					li{
-						width: 100%;
-						.popular_horizontal{
-							.horizontal_left{
-								width: 35%;
-							}
-							.horizontal_right{
-								width: 60%;
-							}
-							.title_news{
-								a{
-									font-size: 14px;
-									line-height: 18px;
-								}
-							}
-						}
+				&:last-child{
+					.horizontal_news-recent{
+						border-bottom: none;
 					}
 				}
 			}
 		}
-		.main_top-right{
-			width: 33%;
-			float: right;
-
-			.news_recent{
-				border: 1px solid #EBEBEB;
+	}
+// ---------------QUẢNG CÁO-----------------------
+	.maketting{
+		margin: 20px 0px;
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+//------------- 5 TIN MỚI NHẤT ---------------------
+	.five_news-hot{
+		width: 100%;
+		padding: 0px 20px 20px 20px;
+		border: 1px solid #EBEBEB;
+		.list_five-news{
+			counter-reset: section;
+			li{
+				float: left;
+				width: 100%;
+				padding: 5px 0px 5px 20px;
+				list-style-type: decimal;
+				border-top: 1px solid #eaeaea;
+				position: relative;
 				overflow: hidden;
-				padding: 0px 20px 20px 20px;
-				.content_news-recent{
-					li{
-						width: 100%;
-						.horizontal_news-recent{
-							.horizontal_left{
-								width: 33%;
-							}
-							.horizontal_right{
-								width: 64%;
-								.title_news{
-									a{
-										font-size: 14px;
-										line-height: 16px;
-									}
-								}
-								.post_news{
-									.author_news{
-										font-size: 12px;
-									}
-								}
-							}
-
-						}
-						&:last-child{
-							.horizontal_news-recent{
-								border-bottom: none;
-							}
-						}
+				&:before{
+					counter-increment: section;
+					content: counter(section);
+					position: absolute;
+					top: 8px;
+					left: 0px;
+					@include text($color_text, 16px, none, center, none, normal);
+				}
+				a{
+					@include text($color_text, 16px, none, left, none, normal);
+					line-height: 22px;
+					font-family: Roboto_Bold;
+					&:hover{
+						color: $color_text-hover;
 					}
 				}
 			}
+		}
+	}
 
-			.maketting{
-				margin: 20px 0px;
-				img{
-					max-width: 100%;
+	// .news_trending{
+	// 	border-top: none;
+	// 	padding: 0px 0px 10px 0px;
+	// 	background: url(../images/lapgachcathome.png) repeat-x center bottom;
+	// 	.content_news-trending{
+	// 		width: 100%;
+	// 		li{
+	// 			float: left;
+	// 			width: 22%;
+	// 			margin-left: 3%;
+	// 			margin-right: 0%;
+	// 			&:first-child{
+	// 				margin-left: 0px;
+	// 			}
+	// 			.list_news-trending{
+	// 				li{
+	// 					width: 100%;
+	// 					margin-left: 0px;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+//-------------  VIDEO MỚI --------------------------
+	.video_news-hot{
+		background-color: #222222;
+		height: 350px;
+		.video_news{
+			padding: 20px 0px;
+			.content_video{
+				width: 60%;
+				float: left;
+				iframe{
+					width: 100%;
 					max-height: 100%;
+					height: 315px;
 				}
 			}
-
-			.five_news-hot{
-				padding: 0px 20px 20px 20px;
-				border: 1px solid #EBEBEB;
-				.list_five-news{
-					counter-reset: section;
-					li{
-						float: left;
-						width: 100%;
-						padding: 5px 0px 5px 20px;
-						list-style-type: decimal;
-						border-top: 1px solid #eaeaea;
-						position: relative;
-						overflow: hidden;
-						&:before{
-							counter-increment: section;
-							content: counter(section);
-    						position: absolute;
-    						top: 8px;
-    						left: 0px;
-    						@include text($color_text, 16px, none, center, none, normal);
+			.list_video{
+				width: 35%;
+				height: 320px;
+				float: left;
+				margin-left: 4%; 
+				.horizontal_news-video{
+					border: none;
+					.horizontal_right{
+						.title_news{
+							a{
+								color: #ffffff;
+								font-size: 14px;
+								line-height: 20px;
+							}
 						}
-						a{
-							@include text($color_text, 16px, none, left, none, normal);
-							line-height: 22px;
-							font-family: Roboto_Bold;
-							&:hover{
-								color: $color_text-hover;
+						.post_news{
+							.author_news{
+								color: #ffffff;
 							}
 						}
 					}
@@ -349,136 +443,85 @@ $color_text-copyright       : #999;
 			}
 		}
 	}
-	.main_bottom{
-		padding-bottom: 100px;
-		overflow: hidden;
-		.news_trending{
-			border-top: none;
-			padding: 0px 0px 10px 0px;
-			background: url(../images/lapgachcathome.png) repeat-x center bottom;
-			.content_news-trending{
-				width: 100%;
-				li{
-					float: left;
-					width: 22%;
-					margin-left: 3%;
-					margin-right: 0%;
-					&:first-child{
-						margin-left: 0px;
+//------------- TIN DANH MỤC --------------------------
+	.news_category{
+		width: 70%;
+		float: left;
+		.list_news-category{
+			width: 100%;
+			li{
+				width: 29%;
+				float: left;
+				margin-left: 3%;
+				border-right: 1px dotted #c6c6c6;
+				padding-right: 2%;
+				margin-top: 10px;
+				&:nth-child(3n+1){
+					margin-left: 0px;
+				}
+
+				&:nth-child(n+4){
+					border-top: 1px dotted #c6c6c6;
+				}
+				.content_news-category{
+					border-top: none;
+					.title_block-news{
+						h3{
+							@include text($color_text, 14px, none, left, uppercase, none);
+							line-height: 18px;
+						}
 					}
-					.list_news-trending{
+					.detail_news-category{
 						li{
 							width: 100%;
-							margin-left: 0px;
-						}
-					}
-				}
-			}
-		}
-
-		.video_news-hot{
-			background-color: #222222;
-			height: 350px;
-			.video_news{
-				padding: 20px 0px;
-				.content_video{
-					width: 60%;
-					float: left;
-					iframe{
-						width: 100%;
-						max-height: 100%;
-						height: 315px;
-					}
-				}
-				.list_video{
-					width: 35%;
-					height: 320px;
-					float: left;
-					margin-left: 4%; 
-					.horizontal_news-video{
-						border: none;
-						.horizontal_right{
-							.title_news{
-								a{
-									color: #ffffff;
-									font-size: 14px;
-									line-height: 20px;
-								}
-							}
-							.post_news{
-								.author_news{
-									color: #ffffff;
-								}
+							margin: 0;
+							border: none;
+							.vertical_item{
+								padding: 10px 0px;
 							}
 						}
 					}
 				}
 			}
 		}
+	}
 
-		.news_category{
-			width: 70%;
-			float: left;
-			.list_news-category{
+	.social_media{
+		width: 70%;
+		.content_block-news{
+			li{
 				width: 100%;
-				li{
-					width: 29%;
-					float: left;
-					margin-left: 3%;
-					border-right: 1px dotted #c6c6c6;
-					padding-right: 2%;
-					margin-top: 10px;
-					&:nth-child(3n+1){
-						margin-left: 0px;
+				.horizontal_item{
+					.horizontal_left{
+						width: 35%;
 					}
-
-					&:nth-child(n+4){
-						border-top: 1px dotted #c6c6c6;
-					}
-					.content_news-category{
-						border-top: none;
-						.title_block-news{
-							h3{
-								@include text($color_text, 14px, none, left, uppercase, none);
-								line-height: 18px;
-							}
-						}
-						.detail_news-category{
-							li{
-								width: 100%;
-								margin: 0;
-								border: none;
-								.vertical_item{
-									padding: 10px 0px;
-								}
-							}
-						}
+					.horizontal_right{
+						width: 60%;
 					}
 				}
 			}
 		}
+	}
 
-		.social_media{
-			width: 70%;
-			.content_block-news{
-				li{
-					width: 100%;
-					.horizontal_item{
-						.horizontal_left{
-							width: 35%;
-						}
-						.horizontal_right{
-							width: 60%;
-						}
-					}
+	.block_news-different{
+		width: 67%;
+		float: left;
+		padding: 20px 15px;
+	}
+
+	.list_news{
+		width: 100%;
+		overflow: hidden;
+		li{
+			width: 100%;
+			.horizontal_item{
+				.horizontal_left{
+					width: 50%;
+				}
+				.horizontal_right{
+					width: 45%;
 				}
 			}
-		}
-
-		.block_news-different{
-			width: 67%;
-			float: left;
-			padding: 20px 15px;
 		}
 	}
 }
