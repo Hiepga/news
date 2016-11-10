@@ -43,7 +43,7 @@ a{display: block;}
 		width: 85%;
 		height: auto;
 		margin: 0px auto;
-		overflow: hidden;
+		// overflow: hidden;
 	}
 }
 
@@ -105,8 +105,8 @@ a{display: block;}
 			display: block;
 			padding: 5px 0 0 0;
 			a{
-				color: $color_text-hover;
-				display: inline-block;
+				color: $color_text-hover !important;
+				display: inline-block !important;
 				&:hover{
 					text-decoration: underline;
 				}
